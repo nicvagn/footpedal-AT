@@ -31,13 +31,13 @@ pad();
 
 // button thing
 bOff = 10;
-translate([X*0.5 + bOff, Y*0.33, Z])
+translate([X*0.5 + bOff, Y*0.33, Z+1.5])
 difference() {
 cube([4,6,6], center=true);
 cylinder(h=100, r=.5);
 }
 
-translate([X*0.5 - bOff, Y*0.33, Z])
+translate([X*0.5 - bOff, Y*0.33, Z+1.5])
 difference() {
 cube([4,6,6], center=true);
 cylinder(h=100, r=.5);
@@ -45,6 +45,7 @@ cylinder(h=100, r=.5);
 
 // top button acceptor
 translate([X*0.5, Y+Y*0.66, Z])
-cube([2*bOff,6,6], center=true);
+cube([2*bOff,8,2], center=true);
+
 
 
