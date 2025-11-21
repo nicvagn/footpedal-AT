@@ -1,0 +1,3 @@
+- I wanted to have more foot pedals, I own a savant elite 2 tri-pedal
+- There are many applications for a 3D printed pedal.
+- the plug lets you use it with lots of stuff
