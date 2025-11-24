@@ -7,6 +7,7 @@ X = 60;
 Y = 90;
 Z = 3;
 hingeGap = 0.5;
+switchLen=6;
 
 module pad(padX=X, padY=Y, padZ=Z) {
 cube([padX,padY, padZ]);
@@ -29,24 +30,9 @@ hinge();
 translate([0, Y + (2 * hingeGap)])
 pad();
 
-// button thing
-bOff = 10;
-/*
-translate([X*0.5 + bOff, Y*0.33, Z+1.5])
-difference() {
-cube([4,6,6], center=true);
-cylinder(h=100, r=.5);
-}
-
-translate([X*0.5 - bOff, Y*0.33, Z+1.5])
-difference() {
-cube([4,6,6], center=true);
-cylinder(h=100, r=.5);
-}*/
-
 // button "base"
-translate([X*0.5, Y*0.33, Z+1.5])
-cube([13,13,5], center=true);
+translate([X*0.5, Y*0.33, Z+4])
+cube([switchLen,switchLen,8], center=true);
 // base cable run
 translate([X*0.15, Y*0.33, Z+1])
 cube([2,2,4], center=true);
@@ -56,7 +42,7 @@ cube([1,6,1], center=true);
 translate([X*0.15, Y*0.28, Z+1])
 cube([2,2,4], center=true);
 
-// connector nub
+// connector butt plate nub
 cube([2,10,6]);
 
 //spring thing maybe if I find a spring 
@@ -68,7 +54,9 @@ cube([4,4,4], center=true);
 */
 
 // top button acceptor
-translate([X*0.5, Y+Y*0.72, Z])
-cube([10,10,4], center=true);
+translate([0, Y+Y*0.83 , Z])
+rotate([180,-90,0])
+linear_extrude(height=X)
+right_triangle([10,30]);
 
 
