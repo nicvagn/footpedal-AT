@@ -57,6 +57,6 @@ cube([4,4,4], center=true);
 translate([0, Y+Y*0.83 , Z])
 rotate([180,-90,0])
 linear_extrude(height=X)
-right_triangle([10,30]);
+right_triangle([9,30]);
 
 
